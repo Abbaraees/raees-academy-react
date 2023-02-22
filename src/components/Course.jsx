@@ -2,6 +2,7 @@ export default function Course(props) {
     return (
         <div className="course">
             <h1 className="course--name">{props.name}</h1>
+            <p className="course--description">{props.description}</p>
             {   props.enrolled && <>
                 <div className="course--progressbar">
                 <div className="course--progress" style={{width: props.progress+"%"}}>
