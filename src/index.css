@@ -145,6 +145,10 @@ nav a {
 }
 
 footer {
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
   background-color: teal;
   text-align: center;
   color: white;
