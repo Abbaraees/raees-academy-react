@@ -144,9 +144,50 @@ nav a {
   margin: 5px auto;
 }
 
+/* == Courses Page == */
+.page-hero {
+  /* background-color: rebeccapurple; */
+  /* height: 350px; */
+  padding: 30px;
+}
+
+.page-hero p {
+  line-height: 2em;
+}
+
+.page-hero h1 {
+  margin: 0;
+}
+
+.filter-section {
+  background-color: teal;
+  padding: 10px 30px;
+}
+
+.filter-section h3 {
+  margin: 0;
+  color: #FFFFFF;
+}
+
+.filters form {
+  /* background-color: aliceblue; */
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+}
+
+.filter-section form select {
+  flex-basis: 200px;
+  height: 30px;
+  font-size: 16px;
+  /* background-color: aqua; */
+}
+
 footer {
   width: 100%;
   position: fixed;
+  margin-top: auto;
   left: 0px;
   bottom: 0px;
   background-color: teal;
