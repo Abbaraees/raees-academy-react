@@ -195,30 +195,32 @@ footer {
   font-size: 13px;
 }
 
-/* == Login Page == */
-.login--page {
+/* == Login Page and signup Page == */
+.auth--page {
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 97vh;
 }
 
-.login--container {
+.auth--container
+ {
   position: relative;
   width: 500px;
-  height: 300px;
   margin: 0 auto;
   background-color: teal;
   border-radius: 10px;
   padding-top: 20px;
+  padding-bottom: 150px;
 }
 
-.login--container > h1 {
+.auth--container > h1 {
   text-align: center;
   color: whitesmoke;
   margin: 0;
 }
 
-.login--form {
+.auth--form
+{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -228,7 +230,7 @@ footer {
   margin-top: 20px;
 }
 
-.login--form > input {
+.auth--form > input {
   width: 300px;
   height: 40px;
   border: none;
@@ -237,7 +239,7 @@ footer {
 }
 
 
-.login--form > button {
+.auth--form > button {
   width: 200px;
   height: 30px;
   border-radius: 5px;
@@ -246,7 +248,7 @@ footer {
   font-variant: small-caps;
 }
 
-.login--links {
+.auth--links {
   position: absolute;
   bottom: 4px;
   display: flex;
@@ -255,7 +257,7 @@ footer {
   padding:0 20px;
 }
 
-.login--links > a {
+.auth--links > a {
   color: whitesmoke;
   font-weight: 500;
 }
