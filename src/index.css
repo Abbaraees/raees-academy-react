@@ -36,6 +36,10 @@ nav a {
   font-weight: 500;
 }
 
+.nav--links  .active {
+  color: #141414;
+}
+
 .user-icon {
   font-size: 30px;
 }

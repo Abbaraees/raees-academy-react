@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Course from '../components/Course'
 import data from '../data'
+import { NavLink } from 'react-router-dom'
 
 export default function Home() {
     const myCourses = data.filter(item => item.enrolled).map(item => {
@@ -30,7 +31,7 @@ export default function Home() {
             <section className='all-courses-section section'>
                 <div className='section-heading'>
                         <h1>All Courses</h1>
-                        <a href="#">VIEW ALL</a>
+                        <NavLink to="/courses">VIEW ALL</NavLink>
                 </div>
                 <div className='courses'>
                     { allCourses }

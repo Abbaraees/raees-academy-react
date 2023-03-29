@@ -1,12 +1,14 @@
+import { NavLink } from 'react-router-dom'
+
 export default function Navbar() {
     return (
         <nav>
             <div className="nav--logo">
-                <a href="#">Raees Academy</a>
+                <NavLink to="/home">Raees Academy</NavLink>
             </div>
             <div className="nav--links">
-                <a href="#">Home</a>
-                <a href="#">Learn</a>
+                <NavLink to="/home">Home</NavLink>
+                <NavLink to="/courses">Learn</NavLink>
                 <a href="#">Blog</a>
                 <a href="#">About</a>
             </div>
