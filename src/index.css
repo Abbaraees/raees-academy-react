@@ -144,8 +144,20 @@ nav a {
 }
 
 .course--resume-btn {
+  background-color: whitesmoke;
+  text-align: center;
+  text-decoration: none;
+  padding: 5px;
+  color: teal;
+  font-weight: bold;
+  font-size: 14px;
   width: 100%;
   margin: 5px auto;
+}
+
+.course--resume-btn:hover {
+  opacity: 0.9;
+  color: black;
 }
 
 /* == Courses Page == */
@@ -264,4 +276,68 @@ footer {
 .auth--links > a {
   color: whitesmoke;
   font-weight: 500;
+}
+
+/* == Course Page == */
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.course-intro {
+  /* height: 400px; */
+  padding: 30px 0;
+  color: #141414;
+}
+
+.course-stats {
+  display: flex ;
+  gap: 10px;
+}
+
+.course-name {
+  margin: 0;
+  text-shadow: 0px 0px 4px white;
+}
+
+.course-description {
+  width: 100%;
+  max-width: 800px;
+  line-height: 2em;
+  text-align: justify;
+}
+
+.enroll-btn {
+  background-color: teal;
+  color: whitesmoke;
+  font-weight: bold;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+}
+
+.enroll-btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+
+.course-contents {
+  margin-bottom: 10px;
+  background-color: rgba(0, 128, 128, 0.315);
+
+}
+
+.lesson {
+  border-bottom: 2px solid teal;
+}
+
+.lesson-name {
+  text-align: center;
+}
+
+.lesson-description {
+  width: 100%;
+  max-width: 800px;
+  line-height: 1.5em;
 }

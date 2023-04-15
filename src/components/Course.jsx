@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function Course(props) {
     return (
         <div className="course">
@@ -8,10 +10,13 @@ export default function Course(props) {
                 <div className="course--progress" style={{width: props.progress+"%"}}>
                 </div>
                 </div>
-                <button className="course--resume-btn">RESUME</button>
+                <Link className="course--resume-btn" to={`/courses/${props.id}`}>RESUME</Link>
             </>
             }
-            {!props.enrolled && <button className="course--resume-btn">VIEW COURSE</button>}
+            {
+                !props.enrolled &&
+                <Link className="course--resume-btn" to={`/courses/${props.id}`}>VIEW COURSE</Link>
+            }
         </div>
     )
 }

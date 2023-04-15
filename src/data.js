@@ -12,7 +12,8 @@ export default [
         "description": "Learn how to manage code, collaborate with others, and track changes in a project's codebase.",
         "enrolled": true,
         "progress": 82,
-    },
+        "longDescription": "Version control is an essential tool for software development, collaboration, and project management. Git is a widely-used and powerful version control system that enables developers to track changes, manage versions, and collaborate with others efficiently. This course provides a comprehensive introduction to version control using Git. Students will learn how to install and configure Git, create repositories, track changes, and collaborate with others using Git. They will also learn best practices for using Git and how to resolve common issues that arise during the development process.   This course is designed for software developers, project managers, and anyone who wants to learn how to use Git for version control. It is suitable for both beginners and those with some experience with Git who want to improve their skills. By the end of the course, students will have a strong understanding of version control using Git, and they will be able to use Git to manage their projects more efficiently and collaboratively.",
+       },
     {
         "id": 3,
         "name": "Linux Command",
