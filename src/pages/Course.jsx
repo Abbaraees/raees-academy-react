@@ -16,8 +16,8 @@ export default function Course() {
           <p className="course-description">{course.longDescription}</p>
           <div className="course-stats">
             <p><i className="fa-solid fa-film"></i> 26 Videos</p>
-            <p><i class="fa-solid fa-brain"></i> 14 Quizes</p>
-            <p><i class="fa-regular fa-clock"></i> 4 Hours</p>
+            <p><i className="fa-solid fa-brain"></i> 14 Quizes</p>
+            <p><i className="fa-regular fa-clock"></i> 4 Hours</p>
           </div>
           {
             course.enrolled ?
