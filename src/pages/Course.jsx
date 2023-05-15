@@ -1,12 +1,14 @@
 import { useParams } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
+import Module from "../components/Module";
 import data from "../data";
 
 
 export default function Course() {
   const {courseId} = useParams()
   const course = data.filter(course => course.id == courseId)[0]
+  const modules = course.modules.map(module => <Module {...module} key={module.id} />)
   return (
     <>
       <Navbar />
@@ -28,42 +30,7 @@ export default function Course() {
       </section>
       <section className="course-contents">
         <div className="container" >
-          <div className="lesson" onClick={() => window.location = '/'}>
-            <h2 className="lesson-name">Module 1</h2>
-            <p className="lesson-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur ex doloremque debitis rerum facilis consequatur animi rem quaerat vero fuga? Tenetur voluptates aliquam natus ea cupiditate at sunt a quae?</p>
-            <div className="course-stats">
-              <p><i className="fa-solid fa-film"></i> 26 Videos</p>
-              <p><i class="fa-solid fa-brain"></i> 14 Quizes</p>
-              <p><i class="fa-regular fa-clock"></i> 4 Hours</p>
-            </div>
-         </div>
-         <div className="lesson">
-            <h2 className="lesson-name">Module 2</h2>
-            <p className="lesson-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur ex doloremque debitis rerum facilis consequatur animi rem quaerat vero fuga? Tenetur voluptates aliquam natus ea cupiditate at sunt a quae?</p>
-            <div className="course-stats">
-              <p><i className="fa-solid fa-film"></i> 26 Videos</p>
-              <p><i class="fa-solid fa-brain"></i> 14 Quizes</p>
-              <p><i class="fa-regular fa-clock"></i> 4 Hours</p>
-            </div>
-         </div>
-         <div className="lesson">
-            <h2 className="lesson-name">Module 3</h2>
-            <p className="lesson-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur ex doloremque debitis rerum facilis consequatur animi rem quaerat vero fuga? Tenetur voluptates aliquam natus ea cupiditate at sunt a quae?</p>
-            <div className="course-stats">
-              <p><i className="fa-solid fa-film"></i> 26 Videos</p>
-              <p><i class="fa-solid fa-brain"></i> 14 Quizes</p>
-              <p><i class="fa-regular fa-clock"></i> 4 Hours</p>
-            </div>
-         </div>
-         <div className="lesson">
-            <h2 className="lesson-name">Module 4</h2>
-            <p className="lesson-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur ex doloremque debitis rerum facilis consequatur animi rem quaerat vero fuga? Tenetur voluptates aliquam natus ea cupiditate at sunt a quae?</p>
-            <div className="course-stats">
-              <p><i className="fa-solid fa-film"></i> 26 Videos</p>
-              <p><i class="fa-solid fa-brain"></i> 14 Quizes</p>
-              <p><i class="fa-regular fa-clock"></i> 4 Hours</p>
-            </div>
-         </div>
+          {modules}
         </div>
       </section>
     </>

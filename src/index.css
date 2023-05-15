@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -21,11 +26,6 @@ nav {
   box-shadow: 0px 3px 5px #141414;
 }
 
-nav a {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
 .nav--logo {
   font-weight: 700;
   font-size: 18px;
@@ -36,7 +36,7 @@ nav a {
   font-weight: 500;
 }
 
-.nav--links  .active {
+.active {
   color: #141414;
 }
 
@@ -97,7 +97,7 @@ nav a {
 
 .courses {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -122,7 +122,7 @@ nav a {
 }
 
 .course--description {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   color: whitesmoke;
   line-height: 1.3em;
 }
@@ -250,7 +250,6 @@ footer {
   width: 300px;
   height: 40px;
   border: none;
-  color: white;
   border-radius: 5px;
 }
 
@@ -328,16 +327,81 @@ footer {
 
 }
 
-.lesson {
+.module {
   border-bottom: 2px solid teal;
 }
 
-.lesson-name {
+.module-name {
   text-align: center;
 }
 
-.lesson-description {
+.module-description {
   width: 100%;
   max-width: 800px;
   line-height: 1.5em;
+  color: #141414;
+  text-align: justify;
+}
+
+/* Lesson Page */
+.lesson-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.side-bar {
+  width: 15%;
+  min-height: 100vh;
+  background-color: teal;
+  border-right: 2px solid teal;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sidebar-flip {
+  color: whitesmoke;
+  font-size: 30px;
+}
+
+.lesson-content {
+  width: 85%;
+  min-height: 100vh;
+  padding: 0px 20px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background-color: ; */
+}
+
+.lesson-content p {
+  text-align: justify;
+  line-height: 2rem;
+}
+
+.lesson-content h1 {
+  text-align: center;
+}
+
+.lesson a {
+  color:black;
+}
+
+.lessons-nav {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: blue; */
+}
+
+.lessons-nav a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+  color:whitesmoke;
+  background-color: teal;
+  box-shadow: 0px 0px 5px #141414;
 }
