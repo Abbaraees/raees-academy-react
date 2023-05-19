@@ -6,6 +6,8 @@ import Signup from './pages/Signup'
 import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom"
 import Course from './pages/Course'
 import Lesson from './pages/Lesson'
+import Blog from './pages/Blog'
+import About from './pages/About'
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
           <Route path='/signup' element={<Signup />} />
           <Route path='/courses/:courseId' element={<Course />} />
           <Route path='/courses/:courseId/:lessonId' element={<Lesson />} />
+          <Route path='/blog' element={<Blog />} />
+          <Route path='/about' element={<About />} />
           <Route path='*' element={<Navigate to="/home" />} />
         </Routes>
       </BrowserRouter>

@@ -9,8 +9,8 @@ export default function Navbar() {
             <div className="nav--links">
                 <NavLink to="/home">Home</NavLink>
                 <NavLink to="/courses">Learn</NavLink>
-                <a href="#">Blog</a>
-                <a href="#">About</a>
+                <NavLink to="/blog">Blog</NavLink>    
+                <NavLink to="/about">About</NavLink>
             </div>
             <div className="nav--profile">
                 <a href="#"><i className="fa-regular fa-circle-user user-icon"></i></a>
