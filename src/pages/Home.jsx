@@ -7,40 +7,46 @@ import { useState, useEffect } from 'react'
 import { useApi } from '../contexts/ApiProvider'
 
 export default function Home() {
-    const api = useApi()
-    const [allCourses, setAllCourses] = useState()
-    const [myCourses, setMyCourses] = useState()
+    // const api = useApi()
+    // const [allCourses, setAllCourses] = useState()
+    // const [myCourses, setMyCourses] = useState()
 
-    useEffect(() => {
-        (async () => {
-            const response = await api.get('/courses')
-            if (response.ok) {
-                let courses = response.body.data
-                setAllCourses(courses.map((course) => <Course key={course.id} {...course} />))
-            } else {
-                setAllCourses(null)
-            }
-        })()
-    }, [])
+    // useEffect(() => {
+    //     (async () => {
+    //         const response = await api.get('/courses')
+    //         if (response.ok) {
+    //             let courses = response.body.data
+    //             setAllCourses(courses.map((course) => <Course key={course.id} {...course} />))
+    //         } else {
+    //             setAllCourses(null)
+    //         }
+    //     })()
+    // }, [])
 
-    useEffect(() => {
-        (async () => {
-            const response = await api.get('/courses/enrolled')
-            if (response.ok) {
-                let courses = response.body.data
-                setMyCourses(courses.map((course) => <Course key={course.id} {...course} />))
-            } else {
-                setMyCourses(null)
-            }
-        })()
-    }, [])
+    // useEffect(() => {
+    //     (async () => {
+    //         const response = await api.get('/courses/enrolled')
+    //         if (response.ok) {
+    //             let courses = response.body.data
+    //             setMyCourses(courses.map((course) => <Course key={course.id} {...course} />))
+    //         } else {
+    //             setMyCourses(null)
+    //         }
+    //     })()
+    // }, [])
 
 
-    // const myCourses = data.filter(item => item.enrolled).map(item => {
-    //     return (
-    //         <Course key={item.id} {...item} />
-    //     )
-    // })
+    const myCourses = data.filter(item => item.enrolled).map(item => {
+        return (
+            <Course key={item.id} {...item} />
+        )
+    })
+
+    const allCourses = data.map( item => {
+        return (
+            <Course key={item.id} {...item} />
+        )
+    })
    
     return (
         <div>
