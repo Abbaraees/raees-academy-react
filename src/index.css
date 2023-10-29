@@ -3,14 +3,15 @@
 }
 
 a {
-  color: #FFFFFF;
   text-decoration: none;
+  color: black;
 }
 
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: whitesmoke;
+  --primary-color: #008080;
+  background-color: #eeeeee;
 }
 
 nav {
@@ -20,15 +21,16 @@ nav {
   left: 0px;
   justify-content: space-between;
   height: 50px;
-  background-color: teal;
+  background-color: white;
   align-items: center;
   padding: 0 20px;
   box-shadow: 0px 3px 5px #141414;
 }
 
-.nav--logo {
+.nav--logo a{
   font-weight: 700;
   font-size: 18px;
+  color: var(--primary-color);
 }
 
 .nav--links > a {
@@ -37,7 +39,7 @@ nav {
 }
 
 .active {
-  color: #141414;
+  color: var(--primary-color);
 }
 
 .user-icon {
@@ -203,17 +205,19 @@ nav {
 footer {
   width: 100%;
   margin-top: auto;
-  background-color: teal;
   text-align: center;
-  color: white;
+  color: var(--primary-color);
   font-style: italic;
   font-weight: 500;
   font-size: 13px;
+  border-top: 2px solid var(--primary-color);
 }
 
 /* == Login Page and signup Page == */
 .auth--page {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   height: 97vh;
 }
@@ -223,16 +227,14 @@ footer {
   position: relative;
   width: 500px;
   margin: 0 auto;
-  background-color: teal;
-  border-radius: 10px;
-  padding-top: 20px;
-  padding-bottom: 150px;
+  background-color: white;
+  border-radius: 0px 0px 10px 10px;
+  height: 450px;
 }
 
 .auth--container > h1 {
   text-align: center;
-  color: whitesmoke;
-  margin: 0;
+  color: black;
 }
 
 .auth--form
@@ -240,41 +242,71 @@ footer {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
   margin-top: 20px;
+  height: 350px;
 }
 
-.auth--form > input {
-  width: 300px;
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.form-inputs input {
+  width: 400px;
   height: 40px;
-  border: none;
+  border: 2px solid var(--primary-color);
   border-radius: 5px;
 }
 
+.policy-text {
+  margin: 0 auto;
+  margin-top: -20px;
+  width: 400px;
+  font-size: 11px;
+}
 
 .auth--form > button {
-  width: 200px;
+  width: 150px;
   height: 30px;
   border-radius: 5px;
   border: none;
   font-size: 16px;
   font-variant: small-caps;
+  font-weight: bolder;
+  background-color: var(--primary-color);
+  color: white;
 }
 
 .auth--links {
-  position: absolute;
-  bottom: 4px;
+  /* position: absolute;
+  bottom: 4px; */
   display: flex;
-  width: 100%;
+  width: 500px;
   justify-content: space-between;
-  padding:0 20px;
 }
 
-.auth--links > a {
-  color: whitesmoke;
+.auth--links  a {
+  color: black;
   font-weight: 500;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 0px;
+}
+
+.auth--links .active {
+  background-color: #eeeeee;
+  font-weight: bold;
+}
+
+.forgot-password-link {
+  margin-top: -50px;
+  color: var(--primary-color);
 }
 
 /* == Course Page == */
@@ -323,7 +355,7 @@ footer {
 
 .course-contents {
   margin-bottom: 10px;
-  background-color: rgba(0, 128, 128, 0.315);
+  background-color: white;
 
 }
 
@@ -359,6 +391,10 @@ footer {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
+}
+
+.side-bar a .active {
+  color: white;
 }
 
 .sidebar-flip {
