@@ -107,6 +107,7 @@ nav {
 .course {
   background-color: teal;
   flex: 1 250px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -279,6 +280,7 @@ footer {
   font-weight: bolder;
   background-color: var(--primary-color);
   color: white;
+  cursor: pointer;
 }
 
 .auth--links {
@@ -319,6 +321,7 @@ footer {
   /* height: 400px; */
   padding: 30px 0;
   color: #141414;
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .course-stats {
@@ -357,6 +360,11 @@ footer {
   margin-bottom: 10px;
   background-color: white;
 
+}
+
+.course-contents .error-msg {
+  background-color: #eeeeee;
+  margin-left: 0;
 }
 
 .module {
