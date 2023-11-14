@@ -22,14 +22,15 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='/courses/:courseId' element={<Course />} />
-            <Route path='/courses/:courseId/:lessonId' element={<Lesson />} />
+            <Route path='/courses/:courseId/modules/:moduleId/lessons/:lessonId' element={<Lesson />} />
+            <Route path='/courses/:courseId/modules/:moduleId/lessons/start' element={<Lesson />} />
             <Route path='/blog' element={<Blog />} />
             <Route path='/about' element={<About />} />
             <Route path='*' element={<Navigate to="/home" />} />
           </Routes>
         </ApiProvider>
       </BrowserRouter>
-      <footer>Copyrights &copy; 2023 Raees Academy</footer>
+      {/* <footer>Copyrights &copy; 2023 Raees Academy</footer> */}
     </div>
   )
 }

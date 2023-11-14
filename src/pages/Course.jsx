@@ -34,7 +34,7 @@ export default function Course() {
         const modulesResponse = await api.get(`/learn/courses/${courseId}/modules/`);
         if (modulesResponse.ok) {
           const modulesData = modulesResponse.body.data;
-          setModules(modulesData.map(module => <Module key={module.id} {...module}/>));
+          setModules(modulesData.map(module => <Module key={module.id} courseId={courseId} {...module}/>));
         } else {
           setModules(null)
         }
